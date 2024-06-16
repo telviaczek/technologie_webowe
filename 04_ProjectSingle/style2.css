@@ -1,0 +1,285 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 30px; /* Poprawka w wartości marginesu */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #43d0de;
+}
+
+/* Media queries dla urządzeń o szerokości ekranu <= 600px */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.left-block {
+    background-color: #f6f6f6;
+    width: 50vw;
+    height: 90vh;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.fruits{
+    height: 90vh;
+    width: 49vw;
+}
+
+.text-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.large-text {
+    font-weight: bold;
+    font-size: 4vh;
+    color: black;
+}
+
+.small-text {
+    font-size: 1.7vh;
+    color: grey;
+    width: 100%;
+}
+
+.client-info {
+    font-size: 1.7vh;
+    color: grey;
+    margin-top: 10px; /* Dodatkowy margines dla separacji od poprzedniego tekstu */
+}
+
+.client-label {
+    font-weight: bold;
+    color: black;
+    font-size: 1.7vh;
+}
+
+.date-info {
+    font-size: 1.7vh;
+    color: grey;
+    margin-top: 10px; /* Dodatkowy margines dla separacji od poprzedniego tekstu */
+}
+
+.date-label {
+    font-weight: bold;
+    color: black;
+    font-size: 1.7vh;
+}
+
+.share-info {
+    font-size: 1.7vh;
+    color: grey;
+    margin-top: 10px; /* Dodatkowy margines dla separacji od poprzedniego tekstu */
+}
+
+.share-label {
+    font-weight: bold;
+    color: black;
+    font-size: 1.7vh;
+}
+@media screen and (max-width: 868px) {
+    .main-content{
+        flex-direction: column
+    }
+    .left-block{
+        width: 100vw;
+    }
+    .text-block{
+        width: 90vw;
+        align-items: flex-start;
+    }
+    .fruits{
+        width: 100vw;
+        height: 30vh;
+    }
+    .small-text{
+        width: 100%;
+    }
+
+  }
+
+/* Pozostała część CSS */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    height: 2em;
+    overflow: hidden;
+}
+.paginationbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    width: 70vw;
+    height: 5em;
+}
+.paginationbox img{
+    height: 20px;
+}
+
+.previous,
+.next {
+    font-size: 1.7vh;
+    color: grey;
+    font-weight: 900;
+}
+
+.previous:hover,
+.next:hover {
+    color: #43d0de; /* Kolor zmieniany po najechaniu myszką */
+    cursor: pointer; /* Kursor zmieniany na wskaźnik */
+}
+
+
+
+.footer {
+    color: grey;
+    background-color: #141414;
+    padding: 5em;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: bold;
+  }
+  
+
+  .contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-email,
+.contact-phone {
+    font-size: 0.8em;
+}
+p.top {
+  font-size: 1em;
+  color: white;
+}
+
+p.bottom {
+  margin: 0;
+  font-size: 0.8em;
+}
+.socials > p  {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+.bookmarks > p {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+.second_bookmarks > p {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+
+  .footer p{
+    line-height: 1em;
+  }
+  
+  
+  .footerbox{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+  }
+  
+  .footerbox p{
+    line-height: 0.7em;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 5em;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 5em;
+    }
+  }

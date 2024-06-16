@@ -1,0 +1,272 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    /* Remove the flex display properties */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 30px; /* Poprawka w wartości marginesu */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #43d0de;
+}
+
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    display: flex;
+    overflow: hidden;
+    max-width: 80%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.contact-info {
+    /* padding: 30px;
+    width: 40%; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-form {
+    padding: 30px;
+    width: 60%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 160px;
+    resize: none;
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.contact-form input {
+    border: none;
+    background-color: #f9f9f9;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #989998;
+}
+
+button {
+    padding: 20px 30px;
+    background-color: #11c8c3;
+    border: none;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #0fa39e;
+}
+
+.footer {
+    color: grey;
+    background-color: #141414;
+    padding: 5em;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: bold;
+    clear: both;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-email,
+.contact-phone {
+    font-size: 0.8em;
+    color:grey !important;
+}
+
+p.top {
+    font-size: 1em;
+    color: white;
+}
+
+p.bottom {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.8em !important;
+}
+
+.socials > p {
+    font-size: 0.8em;
+    line-height: 60%;
+}
+
+.bookmarks > p {
+    font-size: 0.8em;
+    line-height: 60%;
+}
+
+.second_bookmarks > p {
+    font-size: 0.8em;
+    line-height: 60%;
+}
+
+.footer p {
+    line-height: 1em;
+}
+
+.footerbox {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.footerbox p {
+    line-height: 0.7em;
+}
+/* Media queries dla urządzeń o szerokości ekranu <= 600px */
+
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .container{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .contact-info{
+        width: 90%;
+        align-items: center;
+    }
+    .contact-form{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
+    }
+}
+
+/* Style dla map-container */
+.map-container {
+    text-align: center;
+    padding: 30px;
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

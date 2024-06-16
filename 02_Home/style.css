@@ -1,0 +1,215 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .logo {
+    margin-left: 20px;
+  }
+  
+  nav {
+    margin-right: 3 0px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #43d0de;
+  }
+  
+  /* Media queries dla urządzeń o szerokości ekranu <= 600px */
+  @media only screen and (max-width: 600px) {
+    header {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .logo {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      margin-right: 0;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  }
+  
+
+  .text_container {
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+    text-align: center;
+    background-color: #f6f6f6; /* Dodajemy kolor tła */
+
+  }
+  
+  h1 {
+    font-size: 35px;
+    color: #000;
+    margin-bottom: 10px; /* Dodajemy odstęp na dole nagłówka */
+  }
+  
+  p {
+    font-size: 20px;
+    color: #888;
+    margin-top: 0; /* Usuwamy domyślny margines górny */
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+  }
+  .galleryitem{
+    position: relative;
+    width: calc(25% - 2px); /* zmniejszyłem 10px na 2px, aby zniwelować boczne marginesy */
+    margin: 0; /* usunąłem marginesy */
+    transition: transform 0.3s ease-in-out; /* dodany efekt przejścia */
+  }
+  .galleryitem > img{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .middle img{
+    position: absolute;
+  }
+ 
+  
+  .galleryitem:hover .middle {
+    opacity: 0.4;
+  }
+/* footer */
+  .footer {
+    background-color: #141414;
+    padding: 5em;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: bold;
+  }
+  
+
+  .contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-email,
+.contact-phone {
+    font-size: 0.8em;
+}
+p.top {
+  font-size: 1em;
+  color: white;
+}
+
+p.bottom {
+  margin: 0;
+  font-size: 0.8em;
+}
+.socials > p  {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+.bookmarks > p {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+.second_bookmarks > p {
+  font-size: 0.8em;
+  line-height: 60%;
+}
+
+  .footer p{
+    line-height: 1em;
+  }
+  
+  
+  .footerbox{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+  }
+  
+  .footerbox p{
+    line-height: 0.7em;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .gallery img {
+      width: calc(100% - 2px); /* zmniejszyłem 10px na 2px, aby zniwelować boczne marginesy */
+    }
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 5em;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .gallery img {
+      width: calc(100% - 2px);/* zmniejszyłem 10px na 2px, aby zniwelować boczne marginesy */
+    }
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 5em;
+    }
+  }

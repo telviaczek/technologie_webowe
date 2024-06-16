@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+nav {
+    margin-right: 30px; /* Poprawka w wartości marginesu */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #43d0de;
+}
+
+/* Media queries dla urządzeń o szerokości ekranu <= 600px */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: -10px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.overlay h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.stats-bar {
+    background-color: #10C9C3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+}
+
+.stat-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.stat p:nth-child(1){
+    font-weight: bold;
+    font-size: 1rem;
+}
+.stat p:nth-child(2n){
+    font-size: 0.9rem;
+}
+
+.text {
+    text-align: left;
+}
+
+.number {
+    font-size: 2em;
+    margin: 0;
+}
+.aboutme{
+    display: flex;
+    flex-direction: row;
+}
+.aboutme img{
+    width: 60%;
+}
+aboutme-info{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutme-info-wrapper{
+    width: 100%;
+    height: 70%;
+    margin: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.aboutme-info-wrapper{
+    width: 50%;
+}
+button {
+    padding: 20px 50px;
+    background-color: #11c8c3;
+    border: none;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.project-info{
+    width: 100%;
+    margin: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+@media screen and (max-width: 980px) {
+    .overlay{
+        font-size: 12px;
+    }
+    .stats-bar{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .stat{
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+    .aboutme{
+        flex-direction: column;
+    }
+    .aboutme img{
+        width: 100%;
+    }
+}
+
+.footer {
+    width: 100%;
+    color: grey;
+    background-color: #141414;
+    padding: 5em;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: bold;
+    clear: both;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-email,
+.contact-phone {
+    color: grey !important;
+    font-size: 0.8em;
+}
+
+p.top {
+    font-size: 1em;
+    color: white;
+}
+
+p.bottom {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.socials p {
+    font-size: 0.8em;
+    line-height: 1.8em;
+}
+
+.bookmarks p {
+    font-size: 0.8em;
+    line-height: 1.8em !important;
+}
+
+.second_bookmarks p {
+    font-size: 0.8em;
+    line-height: 1.8em !important;
+}
+
+.footer p {
+    line-height: 1.8em;
+}
+
+.footerbox {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.footerbox p {
+    line-height: 0.7em;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-info{
+        width: 90%;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+}
+
